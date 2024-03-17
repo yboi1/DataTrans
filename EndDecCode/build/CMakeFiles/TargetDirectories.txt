@@ -1,0 +1,3 @@
+/home/boyi/DataTrans/EndDecCode/build/CMakeFiles/DataTrans.dir
+/home/boyi/DataTrans/EndDecCode/build/CMakeFiles/edit_cache.dir
+/home/boyi/DataTrans/EndDecCode/build/CMakeFiles/rebuild_cache.dir
