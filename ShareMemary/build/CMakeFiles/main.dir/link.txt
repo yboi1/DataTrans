@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/main.dir/src/BaseShm.o CMakeFiles/main.dir/src/SecKeyShm.o CMakeFiles/main.dir/src/main.o -o main 

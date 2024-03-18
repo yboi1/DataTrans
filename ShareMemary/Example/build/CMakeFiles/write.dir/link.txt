@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/write.dir/wShm.c.o -o write 

@@ -14,7 +14,7 @@ public:
 	~RequestFactory();
 
 private:
-	bool m_flag;
+	bool m_flag;	// flag 用于判断传入的参数类型
 	std::string m_encStr;
 	RequestInfo* m_info;
 };

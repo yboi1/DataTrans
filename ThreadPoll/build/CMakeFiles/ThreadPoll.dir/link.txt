@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/ThreadPoll.dir/src/Logger.o CMakeFiles/ThreadPoll.dir/src/TaskQueue.o CMakeFiles/ThreadPoll.dir/src/ThreadPool.o CMakeFiles/ThreadPoll.dir/src/main.o -o ThreadPoll 

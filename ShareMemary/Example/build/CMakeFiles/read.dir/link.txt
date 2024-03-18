@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/read.dir/rShm.c.o -o read 

@@ -1,0 +1,3 @@
+/home/boyi/DataTrans/ThreadPoll/build/CMakeFiles/ThreadPoll.dir
+/home/boyi/DataTrans/ThreadPoll/build/CMakeFiles/edit_cache.dir
+/home/boyi/DataTrans/ThreadPoll/build/CMakeFiles/rebuild_cache.dir

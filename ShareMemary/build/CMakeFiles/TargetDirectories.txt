@@ -1,0 +1,3 @@
+/home/boyi/DataTrans/ShareMemary/build/CMakeFiles/main.dir
+/home/boyi/DataTrans/ShareMemary/build/CMakeFiles/edit_cache.dir
+/home/boyi/DataTrans/ShareMemary/build/CMakeFiles/rebuild_cache.dir
