@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Server.dir/TcpServer/TcpServer.o CMakeFiles/Server.dir/TcpServer/TcpSocket.o CMakeFiles/Server.dir/TcpServer/main.o -o Server 

@@ -1,0 +1,4 @@
+/home/boyi/DataTrans/Linux-tcp/build/CMakeFiles/Client.dir
+/home/boyi/DataTrans/Linux-tcp/build/CMakeFiles/Server.dir
+/home/boyi/DataTrans/Linux-tcp/build/CMakeFiles/edit_cache.dir
+/home/boyi/DataTrans/Linux-tcp/build/CMakeFiles/rebuild_cache.dir

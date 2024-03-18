@@ -23,6 +23,7 @@ void* callback(void* arg)
 		sockTcp->sendMsg(sendMsg);
 		//sockTcp->disConnect();
 	}
+	return NULL;
 }
 
 int main()
@@ -30,7 +31,7 @@ int main()
 	// 创建对象
 	TcpServer *server = new TcpServer;
 	// 设置监听
-	server->setListen(9999);
+	server->setListen(8080);
 	// 等待并接受连接请求
 	while (1)
 	{
