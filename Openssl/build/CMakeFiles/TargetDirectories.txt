@@ -1,0 +1,3 @@
+/home/boyi/DataTrans/Openssl/build/CMakeFiles/test.dir
+/home/boyi/DataTrans/Openssl/build/CMakeFiles/edit_cache.dir
+/home/boyi/DataTrans/Openssl/build/CMakeFiles/rebuild_cache.dir
