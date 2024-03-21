@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include",
+                "/home/boyi/DataTrans/EndDecCode/include",
+                "/home/boyi/DataTrans/Hash/include",
+                "/home/boyi/DataTrans/Linux-tcp",
+                "/home/boyi/DataTrans/ThreadPoll/include",
+                "/home/boyi/DataTrans/Client/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

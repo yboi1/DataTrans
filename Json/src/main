@@ -1,0 +1,97 @@
+#include <iostream>
+#include <json/json.h>
+#include <fstream>
+using namespace Json;	// jsoncpp的命名空间
+using namespace std;
+
+
+void writeJson(){
+	// Value a;
+	// a.append(12);
+	// a.append(Value(12));
+	// a.append(true);
+	// string st = a.toStyledString();
+	// cout << "得到的数据为： "<< st << endl;
+
+	Value v;
+	v.append(Value(12));
+	v.append(19.8);
+	v.append(true);
+	v.append("hello");
+
+	// 创建一个数组对象 Value
+	Value arr;
+	arr.append("a");
+	arr.append("b");
+	arr.append("c");
+
+	// 创建json对象 -> Value
+	Value obj;
+	obj["name"] = "xiaoming";
+	obj["age"] = 12;
+
+	v.append(arr);
+	v.append(obj);
+
+	string st = v.toStyledString();
+
+	FastWriter fw;
+	string jsonTest = fw.write(v);
+	cout << "json Test: " << jsonTest << endl;
+	// cout << "创建对象成功!..\n" << endl;
+
+	ofstream of("../seting/test.json");
+	of << st;
+	of.close();
+}
+void readJson(){
+	ifstream ifs("../seting/test.json");
+	string str;
+	ifs >> str;// 2. 将string -> Value 对象中
+	Reader rd;
+	Value root;
+	rd.parse(ifs, root);
+	// 3 打印输出
+	// 遍历数组
+	for (int i = 0; i < root.size(); ++i)
+	{
+		Value sub = root[i];
+		if (sub.isInt())
+		{
+			cout << sub.asInt() << " ";
+		}
+		else if (sub.isDouble())
+		{
+			cout << sub.asDouble() << " ";
+		}
+		else if (sub.isBool())
+		{
+			cout << sub.asBool() << " ";
+		}
+		else if (sub.isString())
+		{
+			cout << sub.asString() << " ";
+		}
+		else if (sub.isArray())
+		{
+			// 继续遍历这个子数组
+			for (int j = 0; j < sub.size(); ++j)
+			{
+				cout << sub[j].asString() << " ";
+			}
+			cout << endl;
+		}
+		else if (sub.isObject())
+		{
+			// 根据对象中的key, 打印value值
+			cout << sub["name"].asString() << ", "
+				<< sub["age"].asInt() << " ";
+		}
+	}
+
+}
+
+int main(){
+	writeJson();
+	readJson();
+}

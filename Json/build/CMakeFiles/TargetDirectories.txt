@@ -1,0 +1,3 @@
+/home/boyi/DataTrans/Json/build/CMakeFiles/Json_test.dir
+/home/boyi/DataTrans/Json/build/CMakeFiles/edit_cache.dir
+/home/boyi/DataTrans/Json/build/CMakeFiles/rebuild_cache.dir
