@@ -1,6 +1,8 @@
 ﻿#include "RsaCrypto.h"
 #include <openssl/bio.h>
 #include <openssl/err.h>
+#include <openssl/buffer.h>
+#include <string.h>
 #include <iostream>
 
 Cryptographic::Cryptographic()
@@ -28,6 +30,22 @@ Cryptographic::~Cryptographic()
 {
 	RSA_free(m_publicKey);
 	RSA_free(m_privateKey);
+}
+
+void Cryptographic::parseKetString(string keystr, bool pubKey){
+	// 字符串数据 -> BIO对象中
+	BIO* bio = BIO_new_mem_buf(keystr.data(), keystr.size());
+	// 公钥字符串
+	if (pubKey)
+	{
+		PEM_read_bio_RSAPublicKey(bio, &m_publicKey, NULL, NULL);
+	}
+	else
+	{
+		// 私钥字符串
+		PEM_read_bio_RSAPrivateKey(bio, &m_privateKey, NULL, NULL);
+	}
+	BIO_free(bio);
 }
 
 void Cryptographic::generateRsakey(int bits, string pub, string pri)
@@ -96,7 +114,7 @@ string Cryptographic::rsaPubKeyEncrypt(string data)
 {
 	// 计算公钥长度
 	int keyLen = RSA_size(m_publicKey);
-	cout << "pubKey len: " << keyLen << endl;
+	// cout << "pubKey len: " << keyLen << endl;
 	// 申请内存空间
 	char* encode = new char[keyLen + 1];
 	// 使用公钥加密
@@ -106,7 +124,7 @@ string Cryptographic::rsaPubKeyEncrypt(string data)
 	if (ret >= 0)
 	{
 		// 加密成功
-		retStr = string(encode, ret);
+		retStr = toBase64(encode, ret);
 	}
 	// 释放资源
 	delete[]encode;
@@ -115,11 +133,12 @@ string Cryptographic::rsaPubKeyEncrypt(string data)
 
 string Cryptographic::rsaPriKeyDecrypt(string encData)
 {
+	char* text = fromBase64(encData);
 	// 计算私钥长度
 	int keyLen = RSA_size(m_privateKey);
 	// 使用私钥解密
 	char* decode = new char[keyLen + 1];
-	int ret = RSA_private_decrypt(encData.size(), (const unsigned char*)encData.data(),
+	int ret = RSA_private_decrypt(keyLen, (const unsigned char*)text,
 		(unsigned char*)decode, m_privateKey, RSA_PKCS1_PADDING);
 	string retStr = string();
 	if (ret >= 0)
@@ -137,19 +156,51 @@ string Cryptographic::rsaSign(string data, SignLevel level)
 	RSA_sign(level, (const unsigned char*)data.data(), data.size(), (unsigned char*)signBuf,
 		&len, m_privateKey);
 	// cout << "sign len: " << len << endl;
-	string retStr = string(signBuf, len);
+	string retStr = toBase64(signBuf, len);
 	delete []signBuf;
 	return retStr;
 }
 
 bool Cryptographic::rsaVerify(string data, string signData, SignLevel level)
 {
+	int keyLen = RSA_size(m_publicKey);
+	char* sign = fromBase64(signData);
 	// 验证签名
 	int ret = RSA_verify(level, (const unsigned char*)data.data(), data.size(),
-		(const unsigned char*)signData.data(), signData.size(), m_publicKey);
+		(const unsigned char*)sign, keyLen, m_publicKey);
 	if (ret != 1)
 	{
 		return false;
 	}
 	return true;
+}
+
+string Cryptographic::toBase64(const char* str, int len){
+	BIO* mem = BIO_new(BIO_s_mem());
+	BIO* bs64 = BIO_new(BIO_f_base64());
+	// mem添加到bs64中
+	bs64 = BIO_push(bs64, mem);
+	// 写数据
+	BIO_write(bs64, str, len);
+	BIO_flush(bs64);
+	// 得到内存对象指针
+	BUF_MEM *memPtr;
+	BIO_get_mem_ptr(bs64, &memPtr);
+	string retStr = string(memPtr->data, memPtr->length - 1);
+	BIO_free_all(bs64);
+	return retStr;
+}
+
+char* Cryptographic::fromBase64(string str)
+{
+	int length = str.size();
+	BIO* bs64 = BIO_new(BIO_f_base64());
+	BIO* mem = BIO_new_mem_buf(str.data(), length);
+	BIO_push(bs64, mem);
+	char* buffer = new char[length];
+	memset(buffer, 0, length);
+	BIO_read(bs64, buffer, length);
+	BIO_free_all(bs64);
+
+	return buffer;
 }

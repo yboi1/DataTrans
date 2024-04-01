@@ -59,7 +59,7 @@ list(REMOVE_ITEM s_src ${Client_fi})
 
 
 # 添加宏处理项
-# add_compile_definitions(M_DEBUG)
+add_compile_definitions(M_DEBUG)
 
 # 找到 OpenSSL 库
 find_package(OpenSSL REQUIRED)

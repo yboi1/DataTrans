@@ -32,12 +32,18 @@ public:
 	string rsaSign(string data, SignLevel level = Level3);
 	// 使用RSA验证签名
 	bool rsaVerify(string data, string signData, SignLevel level = Level3);
+	// 通过解析字符串得到秘钥
+	void parseKetString(string keystr, bool pubKey=true);
 
 private:
 	// 得到公钥
 	bool initPublicKey(string pubfile);
 	// 得到私钥
 	bool initPrivateKey(string prifile);
+	// 添加base64 编码
+	string toBase64(const char* str, int len);
+	char* fromBase64(string str);
+
 
 private:
 	RSA* m_publicKey;	// 私钥

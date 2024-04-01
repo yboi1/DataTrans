@@ -13,7 +13,8 @@
                 "/home/boyi/DataTrans/Server/include",
                 "/home/boyi/DataTrans/TcpServer/include",
                 "/home/boyi/DataTrans/TcpClient/include",
-                "/home/boyi/DataTrans/Openssl/include"
+                "/home/boyi/DataTrans/Openssl/include",
+                "/home/boyi/DataTrans/connectPool/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

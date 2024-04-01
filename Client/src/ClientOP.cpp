@@ -79,7 +79,7 @@ bool ClientOP::seckeyAgree()
 
 	// 套接字通信 连接服务器
 	TcpSocket* tcp = new TcpSocket();
-	cout << "ip: " << m_info.ip << endl;
+	// cout << "ip: " << m_info.ip << endl;
 	int ret = tcp->connectToHost(m_info.ip, m_info.port);
 	if(ret != 0){
 		cout << " connectToHost error " << endl;
