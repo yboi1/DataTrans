@@ -251,10 +251,24 @@ CMakeFiles/Client.dir/ShareMemary/src/SecKeyShm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/ShareMemary/src/SecKeyShm.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyi/DataTrans/ShareMemary/src/SecKeyShm.cpp -o CMakeFiles/Client.dir/ShareMemary/src/SecKeyShm.s
 
+CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o: CMakeFiles/Client.dir/flags.make
+CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o: ../TcpClient/src/TcpSocket.cpp
+CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o: CMakeFiles/Client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o -MF CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o.d -o CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o -c /home/boyi/DataTrans/TcpClient/src/TcpSocket.cpp
+
+CMakeFiles/Client.dir/TcpClient/src/TcpSocket.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/TcpClient/src/TcpSocket.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boyi/DataTrans/TcpClient/src/TcpSocket.cpp > CMakeFiles/Client.dir/TcpClient/src/TcpSocket.i
+
+CMakeFiles/Client.dir/TcpClient/src/TcpSocket.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/TcpClient/src/TcpSocket.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyi/DataTrans/TcpClient/src/TcpSocket.cpp -o CMakeFiles/Client.dir/TcpClient/src/TcpSocket.s
+
 CMakeFiles/Client.dir/TcpServer/src/TcpServer.o: CMakeFiles/Client.dir/flags.make
 CMakeFiles/Client.dir/TcpServer/src/TcpServer.o: ../TcpServer/src/TcpServer.cpp
 CMakeFiles/Client.dir/TcpServer/src/TcpServer.o: CMakeFiles/Client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Client.dir/TcpServer/src/TcpServer.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Client.dir/TcpServer/src/TcpServer.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Client.dir/TcpServer/src/TcpServer.o -MF CMakeFiles/Client.dir/TcpServer/src/TcpServer.o.d -o CMakeFiles/Client.dir/TcpServer/src/TcpServer.o -c /home/boyi/DataTrans/TcpServer/src/TcpServer.cpp
 
 CMakeFiles/Client.dir/TcpServer/src/TcpServer.i: cmake_force
@@ -264,20 +278,6 @@ CMakeFiles/Client.dir/TcpServer/src/TcpServer.i: cmake_force
 CMakeFiles/Client.dir/TcpServer/src/TcpServer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/TcpServer/src/TcpServer.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyi/DataTrans/TcpServer/src/TcpServer.cpp -o CMakeFiles/Client.dir/TcpServer/src/TcpServer.s
-
-CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o: ../TcpServer/src/TcpSocket.cpp
-CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o: CMakeFiles/Client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o -MF CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o.d -o CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o -c /home/boyi/DataTrans/TcpServer/src/TcpSocket.cpp
-
-CMakeFiles/Client.dir/TcpServer/src/TcpSocket.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/TcpServer/src/TcpSocket.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boyi/DataTrans/TcpServer/src/TcpSocket.cpp > CMakeFiles/Client.dir/TcpServer/src/TcpSocket.i
-
-CMakeFiles/Client.dir/TcpServer/src/TcpSocket.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/TcpServer/src/TcpSocket.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyi/DataTrans/TcpServer/src/TcpSocket.cpp -o CMakeFiles/Client.dir/TcpServer/src/TcpSocket.s
 
 CMakeFiles/Client.dir/ThreadPoll/src/Logger.o: CMakeFiles/Client.dir/flags.make
 CMakeFiles/Client.dir/ThreadPoll/src/Logger.o: ../ThreadPoll/src/Logger.cpp
@@ -336,8 +336,8 @@ Client_OBJECTS = \
 "CMakeFiles/Client.dir/Openssl/src/RsaCrypto.o" \
 "CMakeFiles/Client.dir/ShareMemary/src/BaseShm.o" \
 "CMakeFiles/Client.dir/ShareMemary/src/SecKeyShm.o" \
+"CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o" \
 "CMakeFiles/Client.dir/TcpServer/src/TcpServer.o" \
-"CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o" \
 "CMakeFiles/Client.dir/ThreadPoll/src/Logger.o" \
 "CMakeFiles/Client.dir/ThreadPoll/src/TaskQueue.o" \
 "CMakeFiles/Client.dir/ThreadPoll/src/ThreadPool.o"
@@ -358,8 +358,8 @@ Client: CMakeFiles/Client.dir/Hash/src/Hash.o
 Client: CMakeFiles/Client.dir/Openssl/src/RsaCrypto.o
 Client: CMakeFiles/Client.dir/ShareMemary/src/BaseShm.o
 Client: CMakeFiles/Client.dir/ShareMemary/src/SecKeyShm.o
+Client: CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o
 Client: CMakeFiles/Client.dir/TcpServer/src/TcpServer.o
-Client: CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o
 Client: CMakeFiles/Client.dir/ThreadPoll/src/Logger.o
 Client: CMakeFiles/Client.dir/ThreadPoll/src/TaskQueue.o
 Client: CMakeFiles/Client.dir/ThreadPoll/src/ThreadPool.o

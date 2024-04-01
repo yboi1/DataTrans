@@ -1,3 +1,4 @@
 /home/boyi/DataTrans/build/CMakeFiles/Client.dir
+/home/boyi/DataTrans/build/CMakeFiles/Server.dir
 /home/boyi/DataTrans/build/CMakeFiles/edit_cache.dir
 /home/boyi/DataTrans/build/CMakeFiles/rebuild_cache.dir

@@ -9,7 +9,11 @@
                 "/home/boyi/DataTrans/Hash/include",
                 "/home/boyi/DataTrans/Linux-tcp",
                 "/home/boyi/DataTrans/ThreadPoll/include",
-                "/home/boyi/DataTrans/Client/include"
+                "/home/boyi/DataTrans/Client/include",
+                "/home/boyi/DataTrans/Server/include",
+                "/home/boyi/DataTrans/TcpServer/include",
+                "/home/boyi/DataTrans/TcpClient/include",
+                "/home/boyi/DataTrans/Openssl/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

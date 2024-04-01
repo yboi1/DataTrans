@@ -136,7 +136,7 @@ string Cryptographic::rsaSign(string data, SignLevel level)
 	char* signBuf = new char[RSA_size(m_privateKey) + 1];
 	RSA_sign(level, (const unsigned char*)data.data(), data.size(), (unsigned char*)signBuf,
 		&len, m_privateKey);
-	cout << "sign len: " << len << endl;
+	// cout << "sign len: " << len << endl;
 	string retStr = string(signBuf, len);
 	delete []signBuf;
 	return retStr;

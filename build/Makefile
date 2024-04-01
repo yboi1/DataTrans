@@ -129,6 +129,19 @@ Client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
 .PHONY : Client/fast
 
+#=============================================================================
+# Target rules for targets named Server
+
+# Build rule for target.
+Server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server
+.PHONY : Server
+
+# fast build rule for target.
+Server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
+.PHONY : Server/fast
+
 # target to build an object file
 Client/src/ClientOP.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Client/src/ClientOP.o
@@ -162,241 +175,319 @@ Client/src/main.s:
 # target to build an object file
 EndDecCode/src/Codec.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/Codec.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/Codec.o
 .PHONY : EndDecCode/src/Codec.o
 
 # target to preprocess a source file
 EndDecCode/src/Codec.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/Codec.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/Codec.i
 .PHONY : EndDecCode/src/Codec.i
 
 # target to generate assembly for a file
 EndDecCode/src/Codec.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/Codec.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/Codec.s
 .PHONY : EndDecCode/src/Codec.s
 
 # target to build an object file
 EndDecCode/src/CodecFactory.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/CodecFactory.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/CodecFactory.o
 .PHONY : EndDecCode/src/CodecFactory.o
 
 # target to preprocess a source file
 EndDecCode/src/CodecFactory.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/CodecFactory.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/CodecFactory.i
 .PHONY : EndDecCode/src/CodecFactory.i
 
 # target to generate assembly for a file
 EndDecCode/src/CodecFactory.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/CodecFactory.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/CodecFactory.s
 .PHONY : EndDecCode/src/CodecFactory.s
 
 # target to build an object file
 EndDecCode/src/Message.pb.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/Message.pb.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/Message.pb.o
 .PHONY : EndDecCode/src/Message.pb.o
 
 # target to preprocess a source file
 EndDecCode/src/Message.pb.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/Message.pb.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/Message.pb.i
 .PHONY : EndDecCode/src/Message.pb.i
 
 # target to generate assembly for a file
 EndDecCode/src/Message.pb.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/Message.pb.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/Message.pb.s
 .PHONY : EndDecCode/src/Message.pb.s
 
 # target to build an object file
 EndDecCode/src/RequestCodec.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RequestCodec.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RequestCodec.o
 .PHONY : EndDecCode/src/RequestCodec.o
 
 # target to preprocess a source file
 EndDecCode/src/RequestCodec.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RequestCodec.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RequestCodec.i
 .PHONY : EndDecCode/src/RequestCodec.i
 
 # target to generate assembly for a file
 EndDecCode/src/RequestCodec.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RequestCodec.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RequestCodec.s
 .PHONY : EndDecCode/src/RequestCodec.s
 
 # target to build an object file
 EndDecCode/src/RequestFactory.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RequestFactory.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RequestFactory.o
 .PHONY : EndDecCode/src/RequestFactory.o
 
 # target to preprocess a source file
 EndDecCode/src/RequestFactory.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RequestFactory.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RequestFactory.i
 .PHONY : EndDecCode/src/RequestFactory.i
 
 # target to generate assembly for a file
 EndDecCode/src/RequestFactory.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RequestFactory.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RequestFactory.s
 .PHONY : EndDecCode/src/RequestFactory.s
 
 # target to build an object file
 EndDecCode/src/RespondCodec.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RespondCodec.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RespondCodec.o
 .PHONY : EndDecCode/src/RespondCodec.o
 
 # target to preprocess a source file
 EndDecCode/src/RespondCodec.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RespondCodec.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RespondCodec.i
 .PHONY : EndDecCode/src/RespondCodec.i
 
 # target to generate assembly for a file
 EndDecCode/src/RespondCodec.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RespondCodec.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RespondCodec.s
 .PHONY : EndDecCode/src/RespondCodec.s
 
 # target to build an object file
 EndDecCode/src/RespondFactory.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RespondFactory.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RespondFactory.o
 .PHONY : EndDecCode/src/RespondFactory.o
 
 # target to preprocess a source file
 EndDecCode/src/RespondFactory.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RespondFactory.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RespondFactory.i
 .PHONY : EndDecCode/src/RespondFactory.i
 
 # target to generate assembly for a file
 EndDecCode/src/RespondFactory.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/EndDecCode/src/RespondFactory.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/EndDecCode/src/RespondFactory.s
 .PHONY : EndDecCode/src/RespondFactory.s
 
 # target to build an object file
 Hash/src/Hash.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Hash/src/Hash.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Hash/src/Hash.o
 .PHONY : Hash/src/Hash.o
 
 # target to preprocess a source file
 Hash/src/Hash.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Hash/src/Hash.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Hash/src/Hash.i
 .PHONY : Hash/src/Hash.i
 
 # target to generate assembly for a file
 Hash/src/Hash.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Hash/src/Hash.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Hash/src/Hash.s
 .PHONY : Hash/src/Hash.s
 
 # target to build an object file
 Openssl/src/RsaCrypto.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Openssl/src/RsaCrypto.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o
 .PHONY : Openssl/src/RsaCrypto.o
 
 # target to preprocess a source file
 Openssl/src/RsaCrypto.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Openssl/src/RsaCrypto.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Openssl/src/RsaCrypto.i
 .PHONY : Openssl/src/RsaCrypto.i
 
 # target to generate assembly for a file
 Openssl/src/RsaCrypto.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Openssl/src/RsaCrypto.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Openssl/src/RsaCrypto.s
 .PHONY : Openssl/src/RsaCrypto.s
+
+# target to build an object file
+Server/src/ServerOP.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/src/ServerOP.o
+.PHONY : Server/src/ServerOP.o
+
+# target to preprocess a source file
+Server/src/ServerOP.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/src/ServerOP.i
+.PHONY : Server/src/ServerOP.i
+
+# target to generate assembly for a file
+Server/src/ServerOP.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/src/ServerOP.s
+.PHONY : Server/src/ServerOP.s
+
+# target to build an object file
+Server/src/main.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/src/main.o
+.PHONY : Server/src/main.o
+
+# target to preprocess a source file
+Server/src/main.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/src/main.i
+.PHONY : Server/src/main.i
+
+# target to generate assembly for a file
+Server/src/main.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/src/main.s
+.PHONY : Server/src/main.s
 
 # target to build an object file
 ShareMemary/src/BaseShm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ShareMemary/src/BaseShm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ShareMemary/src/BaseShm.o
 .PHONY : ShareMemary/src/BaseShm.o
 
 # target to preprocess a source file
 ShareMemary/src/BaseShm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ShareMemary/src/BaseShm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ShareMemary/src/BaseShm.i
 .PHONY : ShareMemary/src/BaseShm.i
 
 # target to generate assembly for a file
 ShareMemary/src/BaseShm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ShareMemary/src/BaseShm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ShareMemary/src/BaseShm.s
 .PHONY : ShareMemary/src/BaseShm.s
 
 # target to build an object file
 ShareMemary/src/SecKeyShm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ShareMemary/src/SecKeyShm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.o
 .PHONY : ShareMemary/src/SecKeyShm.o
 
 # target to preprocess a source file
 ShareMemary/src/SecKeyShm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ShareMemary/src/SecKeyShm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.i
 .PHONY : ShareMemary/src/SecKeyShm.i
 
 # target to generate assembly for a file
 ShareMemary/src/SecKeyShm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ShareMemary/src/SecKeyShm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.s
 .PHONY : ShareMemary/src/SecKeyShm.s
+
+# target to build an object file
+TcpClient/src/TcpSocket.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/TcpClient/src/TcpSocket.o
+.PHONY : TcpClient/src/TcpSocket.o
+
+# target to preprocess a source file
+TcpClient/src/TcpSocket.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/TcpClient/src/TcpSocket.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/TcpClient/src/TcpSocket.i
+.PHONY : TcpClient/src/TcpSocket.i
+
+# target to generate assembly for a file
+TcpClient/src/TcpSocket.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/TcpClient/src/TcpSocket.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/TcpClient/src/TcpSocket.s
+.PHONY : TcpClient/src/TcpSocket.s
 
 # target to build an object file
 TcpServer/src/TcpServer.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/TcpServer/src/TcpServer.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/TcpServer/src/TcpServer.o
 .PHONY : TcpServer/src/TcpServer.o
 
 # target to preprocess a source file
 TcpServer/src/TcpServer.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/TcpServer/src/TcpServer.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/TcpServer/src/TcpServer.i
 .PHONY : TcpServer/src/TcpServer.i
 
 # target to generate assembly for a file
 TcpServer/src/TcpServer.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/TcpServer/src/TcpServer.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/TcpServer/src/TcpServer.s
 .PHONY : TcpServer/src/TcpServer.s
-
-# target to build an object file
-TcpServer/src/TcpSocket.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/TcpServer/src/TcpSocket.o
-.PHONY : TcpServer/src/TcpSocket.o
-
-# target to preprocess a source file
-TcpServer/src/TcpSocket.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/TcpServer/src/TcpSocket.i
-.PHONY : TcpServer/src/TcpSocket.i
-
-# target to generate assembly for a file
-TcpServer/src/TcpSocket.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/TcpServer/src/TcpSocket.s
-.PHONY : TcpServer/src/TcpSocket.s
 
 # target to build an object file
 ThreadPoll/src/Logger.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ThreadPoll/src/Logger.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ThreadPoll/src/Logger.o
 .PHONY : ThreadPoll/src/Logger.o
 
 # target to preprocess a source file
 ThreadPoll/src/Logger.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ThreadPoll/src/Logger.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ThreadPoll/src/Logger.i
 .PHONY : ThreadPoll/src/Logger.i
 
 # target to generate assembly for a file
 ThreadPoll/src/Logger.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ThreadPoll/src/Logger.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ThreadPoll/src/Logger.s
 .PHONY : ThreadPoll/src/Logger.s
 
 # target to build an object file
 ThreadPoll/src/TaskQueue.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ThreadPoll/src/TaskQueue.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.o
 .PHONY : ThreadPoll/src/TaskQueue.o
 
 # target to preprocess a source file
 ThreadPoll/src/TaskQueue.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ThreadPoll/src/TaskQueue.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.i
 .PHONY : ThreadPoll/src/TaskQueue.i
 
 # target to generate assembly for a file
 ThreadPoll/src/TaskQueue.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ThreadPoll/src/TaskQueue.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.s
 .PHONY : ThreadPoll/src/TaskQueue.s
 
 # target to build an object file
 ThreadPoll/src/ThreadPool.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ThreadPoll/src/ThreadPool.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o
 .PHONY : ThreadPoll/src/ThreadPool.o
 
 # target to preprocess a source file
 ThreadPoll/src/ThreadPool.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ThreadPoll/src/ThreadPool.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.i
 .PHONY : ThreadPoll/src/ThreadPool.i
 
 # target to generate assembly for a file
 ThreadPoll/src/ThreadPool.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/ThreadPoll/src/ThreadPool.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.s
 .PHONY : ThreadPoll/src/ThreadPool.s
 
 # Help Target
@@ -408,6 +499,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Client"
+	@echo "... Server"
 	@echo "... Client/src/ClientOP.o"
 	@echo "... Client/src/ClientOP.i"
 	@echo "... Client/src/ClientOP.s"
@@ -441,18 +533,24 @@ help:
 	@echo "... Openssl/src/RsaCrypto.o"
 	@echo "... Openssl/src/RsaCrypto.i"
 	@echo "... Openssl/src/RsaCrypto.s"
+	@echo "... Server/src/ServerOP.o"
+	@echo "... Server/src/ServerOP.i"
+	@echo "... Server/src/ServerOP.s"
+	@echo "... Server/src/main.o"
+	@echo "... Server/src/main.i"
+	@echo "... Server/src/main.s"
 	@echo "... ShareMemary/src/BaseShm.o"
 	@echo "... ShareMemary/src/BaseShm.i"
 	@echo "... ShareMemary/src/BaseShm.s"
 	@echo "... ShareMemary/src/SecKeyShm.o"
 	@echo "... ShareMemary/src/SecKeyShm.i"
 	@echo "... ShareMemary/src/SecKeyShm.s"
+	@echo "... TcpClient/src/TcpSocket.o"
+	@echo "... TcpClient/src/TcpSocket.i"
+	@echo "... TcpClient/src/TcpSocket.s"
 	@echo "... TcpServer/src/TcpServer.o"
 	@echo "... TcpServer/src/TcpServer.i"
 	@echo "... TcpServer/src/TcpServer.s"
-	@echo "... TcpServer/src/TcpSocket.o"
-	@echo "... TcpServer/src/TcpSocket.i"
-	@echo "... TcpServer/src/TcpSocket.s"
 	@echo "... ThreadPoll/src/Logger.o"
 	@echo "... ThreadPoll/src/Logger.i"
 	@echo "... ThreadPoll/src/Logger.s"

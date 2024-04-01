@@ -19,11 +19,15 @@ ClientOP::ClientOP(string jsonFile)
 	cout << "请稍等! 数据正在努力加载中!..." << endl;
 #endif
 
-	Value root;
-	Reader reader;
-	//	 以二进制格式打开
+	// Value root;
+	// Reader reader;
+	// //	 以二进制格式打开
+	// ifstream ifs(jsonFile);
+	// reader.parse(ifs, root);
 	ifstream ifs(jsonFile);
-	reader.parse(ifs, root);
+	Reader rd;
+	Value root;
+	rd.parse(ifs, root);
 
 	// 将json文件写入到成员中
 	m_info.serverID = root["ServerID"].asString();
@@ -57,7 +61,9 @@ bool ClientOP::seckeyAgree()
 	reqInfo.serverID = m_info.serverID;
 	reqInfo.cmd = 1;
 	reqInfo.data = str.str();
-
+#ifdef M_DEBUG
+	cout << "str : " << str.str() << endl;
+#endif
 	// 创建哈希对象
 	Hash a(T_SHA1);
 	a.addData(str.str());
@@ -73,13 +79,24 @@ bool ClientOP::seckeyAgree()
 
 	// 套接字通信 连接服务器
 	TcpSocket* tcp = new TcpSocket();
+	cout << "ip: " << m_info.ip << endl;
 	int ret = tcp->connectToHost(m_info.ip, m_info.port);
 	if(ret != 0){
 		cout << " connectToHost error " << endl;
 		return false;
 	}
+	
+#ifdef M_DEBUG
+		if(ret==0)
+            cout << "连接服务器成功!..." << endl;
+#endif
 
-	tcp->sendMsg(encstr);
+	ret = tcp->sendMsg(encstr);
+#ifdef M_DEBUG
+		if(ret==0)
+            cout << "数据发送成功!..." << endl;
+#endif
+
 	string msg = tcp->recvMsg();
 
 	// 接受服务器发送过来的 对称加密秘钥
