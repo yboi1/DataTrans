@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/test2.dir/Code/src/test2.o -o test2  -locci -lclntsh 

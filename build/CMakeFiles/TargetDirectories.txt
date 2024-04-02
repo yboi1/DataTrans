@@ -1,0 +1,4 @@
+/home/boyi/Oracle/build/CMakeFiles/test.dir
+/home/boyi/Oracle/build/CMakeFiles/test2.dir
+/home/boyi/Oracle/build/CMakeFiles/edit_cache.dir
+/home/boyi/Oracle/build/CMakeFiles/rebuild_cache.dir
