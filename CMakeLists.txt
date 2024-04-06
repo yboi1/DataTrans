@@ -25,6 +25,9 @@ include_directories(/home/boyi/DataTrans/ShareMemary/include)
 include_directories(/home/boyi/DataTrans/ThreadPoll/include)
 
 include_directories(/home/boyi/DataTrans/Server/include)
+
+include_directories(/home/boyi/DataTrans/OcciOp/include)
+
 # include_directories(/home/boyi/DataTrans/Main/Client/include)
 # include_directories(/home/boyi/DataTrans/Main/Client/include)
 

@@ -63,6 +63,7 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "threadpool.h": "c",
-        "taskqueue.h": "c"
+        "taskqueue.h": "c",
+        "list": "cpp"
     }
 }

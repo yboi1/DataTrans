@@ -4,13 +4,13 @@
 using namespace std;
 
 SecKeyShm::SecKeyShm(int key, int maxNode)
-	: BaseShm(key, maxNode * sizeof(NodeSHMInfo))
+	: BaseShm(key, maxNode * sizeof(NodeSecKeyInfo))
 	, m_maxNode(maxNode)
 {
 }
 
 SecKeyShm::SecKeyShm(string pathName, int maxNode)
-	: BaseShm(pathName, maxNode * sizeof(NodeSHMInfo))
+	: BaseShm(pathName, maxNode * sizeof(NodeSecKeyInfo))
 	, m_maxNode(maxNode)
 {
 }
@@ -23,22 +23,22 @@ void SecKeyShm::shmInit()
 {
 	if (m_shmAddr != NULL)
 	{
-		memset(m_shmAddr, 0, m_maxNode * sizeof(NodeSHMInfo));
+		memset(m_shmAddr, 0, m_maxNode * sizeof(NodeSecKeyInfo));
 	}
 }
 
-int SecKeyShm::shmWrite(NodeSHMInfo * pNodeInfo)
+int SecKeyShm::shmWrite(NodeSecKeyInfo * pNodeInfo)
 {
 	int ret = -1;
 	// 关联共享内存
-	NodeSHMInfo* pAddr = static_cast<NodeSHMInfo*>(mapShm());
+	NodeSecKeyInfo* pAddr = static_cast<NodeSecKeyInfo*>(mapShm());
 	if (pAddr == NULL)
 	{
 		return ret;
 	}
 
 	// 判断传入的网点密钥是否已经存在
-	NodeSHMInfo	*pNode = NULL;
+	NodeSecKeyInfo	*pNode = NULL;
 	for (int i = 0; i < m_maxNode; i++)
 	{
 		// pNode依次指向每个节点的首地址
@@ -51,7 +51,7 @@ int SecKeyShm::shmWrite(NodeSHMInfo * pNodeInfo)
 			strcmp(pNode->serverID, pNodeInfo->serverID) == 0)
 		{
 			// 如果找到了该网点秘钥已经存在, 使用新秘钥覆盖旧的值
-			memcpy(pNode, pNodeInfo, sizeof(NodeSHMInfo));
+			memcpy(pNode, pNodeInfo, sizeof(NodeSecKeyInfo));
 			unmapShm();
 			cout << "写数据成功: 原数据被覆盖!" << endl;
 			return 0;
@@ -60,14 +60,14 @@ int SecKeyShm::shmWrite(NodeSHMInfo * pNodeInfo)
 
 	// 若没有找到对应的信息, 找一个空节点将秘钥信息写入
 	int i = 0;
-	NodeSHMInfo tmpNodeInfo; //空结点
+	NodeSecKeyInfo tmpNodeInfo; //空结点
 	for (i = 0; i < m_maxNode; i++)
 	{
 		pNode = pAddr + i;
-		if (memcmp(&tmpNodeInfo, pNode, sizeof(NodeSHMInfo)) == 0)
+		if (memcmp(&tmpNodeInfo, pNode, sizeof(NodeSecKeyInfo)) == 0)
 		{
 			ret = 0;
-			memcpy(pNode, pNodeInfo, sizeof(NodeSHMInfo));
+			memcpy(pNode, pNodeInfo, sizeof(NodeSecKeyInfo));
 			cout << "写数据成功: 在新的节点上添加数据!" << endl;
 			break;
 		}
@@ -81,23 +81,23 @@ int SecKeyShm::shmWrite(NodeSHMInfo * pNodeInfo)
 	return ret;
 }
 
-NodeSHMInfo SecKeyShm::shmRead(string clientID, string serverID)
+NodeSecKeyInfo SecKeyShm::shmRead(string clientID, string serverID)
 {
 	int ret = 0;
 	// 关联共享内存
-	NodeSHMInfo *pAddr = NULL;
-	pAddr = static_cast<NodeSHMInfo*>(mapShm());
+	NodeSecKeyInfo *pAddr = NULL;
+	pAddr = static_cast<NodeSecKeyInfo*>(mapShm());
 	if (pAddr == NULL)
 	{
 		cout << "共享内存关联失败..." << endl;
-		return NodeSHMInfo();
+		return NodeSecKeyInfo();
 	}
 	cout << "共享内存关联成功..." << endl;
 
 	//遍历网点信息
 	int i = 0;
-	NodeSHMInfo info;
-	NodeSHMInfo	*pNode = NULL;
+	NodeSecKeyInfo info;
+	NodeSecKeyInfo	*pNode = NULL;
 	// 通过clientID和serverID查找节点
 	cout << "maxNode: " << m_maxNode << endl;
 	for (i = 0; i < m_maxNode; i++)

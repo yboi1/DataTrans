@@ -1,3 +1,7 @@
 {
-    "port":9898
+    "port":9898,
+    "ServerID":"boyi",
+    "UserDb":"system",
+    "PassDb":"oracle",
+    "ConnStr":""
 }

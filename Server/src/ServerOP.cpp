@@ -21,7 +21,7 @@ ServerOP::ServerOP(string json){
     reader.parse(ifs, root);
     // 读取port
     m_port = root["port"].asUInt64();
-    // m_serverID = root["ServerID"].asString();
+    m_serverID = root["ServerID"].asString();
 
 }
 
