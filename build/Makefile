@@ -317,6 +317,21 @@ Hash/src/Hash.s:
 .PHONY : Hash/src/Hash.s
 
 # target to build an object file
+OcciOp/src/OCCIOP.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o
+.PHONY : OcciOp/src/OCCIOP.o
+
+# target to preprocess a source file
+OcciOp/src/OCCIOP.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/OcciOp/src/OCCIOP.i
+.PHONY : OcciOp/src/OCCIOP.i
+
+# target to generate assembly for a file
+OcciOp/src/OCCIOP.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/OcciOp/src/OCCIOP.s
+.PHONY : OcciOp/src/OCCIOP.s
+
+# target to build an object file
 Openssl/src/RsaCrypto.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Openssl/src/RsaCrypto.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o
@@ -530,6 +545,9 @@ help:
 	@echo "... Hash/src/Hash.o"
 	@echo "... Hash/src/Hash.i"
 	@echo "... Hash/src/Hash.s"
+	@echo "... OcciOp/src/OCCIOP.o"
+	@echo "... OcciOp/src/OCCIOP.i"
+	@echo "... OcciOp/src/OCCIOP.s"
 	@echo "... Openssl/src/RsaCrypto.o"
 	@echo "... Openssl/src/RsaCrypto.i"
 	@echo "... Openssl/src/RsaCrypto.s"

@@ -3478,7 +3478,8 @@ CMakeFiles/Client.dir/ShareMemary/src/SecKeyShm.o: ../ShareMemary/src/SecKeyShm.
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../ShareMemary/include/SeckKeyNodeInfo.h
 
 CMakeFiles/Client.dir/TcpClient/src/TcpSocket.o: ../TcpClient/src/TcpSocket.cpp \
   /usr/include/stdc-predef.h \
@@ -4554,6 +4555,8 @@ CMakeFiles/Client.dir/ThreadPoll/src/ThreadPool.o: ../ThreadPoll/src/ThreadPool.
 /usr/include/x86_64-linux-gnu/bits/fcntl.h:
 
 ../TcpClient/src/TcpSocket.cpp:
+
+../ShareMemary/include/SeckKeyNodeInfo.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h:
 

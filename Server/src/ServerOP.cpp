@@ -12,6 +12,7 @@
 #include "Hash.h"
 using namespace std;
 using namespace Json;
+// # define _GLIBCXX_USE_CXX11_ABI 0
 
 ServerOP::ServerOP(string json){
     Value root;
@@ -22,6 +23,13 @@ ServerOP::ServerOP(string json){
     // 读取port
     m_port = root["port"].asUInt64();
     m_serverID = root["ServerID"].asString();
+
+    // 对数据库对象的初始化
+    m_usrdb = root["UserDb"].asString();
+    m_passdb = root["PassDb"].asString();
+    m_connstr = root["ConnStr"].asString();
+
+    m_occi.connectDB("system", "oracle", "172.17.0.2:1521/xe");
 
 }
 
@@ -105,7 +113,7 @@ string ServerOP::seckeyAgree(RequestMsg* Msg){
     else{
         cout << "签名检验成功" << endl;
     
-        // 生成对称加密的秘钥
+        // 生成对称加密的秘钥 
         string key = getRandKey(Len16);
 
         string seckey = rsa.rsaPubKeyEncrypt(key);
@@ -115,6 +123,22 @@ string ServerOP::seckeyAgree(RequestMsg* Msg){
         info.seckeyID = 12;
         info.serverID = m_serverID;
         info.status = true;
+
+        NodeSecKeyInfo node;
+        strcpy(node.clientID, Msg->clientid().data());
+        strcpy(node.serverID, Msg->serverid().data());
+        strcpy(node.seckey, key.data());    // 未加密的秘钥
+        node.seckeyID = m_occi.getKeyID();
+        node.status = 1;
+
+        bool bl = m_occi.writeSecKey(&node);
+        if(bl){
+            m_occi.updataKeyID(node.seckeyID+1);
+        }
+        else{
+            info.status = false;
+        }
+
     }
 
     // 数据进行序列化

@@ -5,6 +5,8 @@
 # 设置编译选项，添加 -g 选项以启用调试信息
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 
+#target_compile_definitions(occi PRIVATE -D_GLIBCXX_USE_CXX11_ABI=0)
+
 
 # 将头文件包含进来
 # include_directories(../EndDecCode/include)
@@ -45,6 +47,11 @@ file(GLOB_RECURSE Server_fi "Server/*")
 list(REMOVE_ITEM c_src ${Server_fi})
 
 
+file(GLOB_RECURSE occi_fi "OcciOp/*")
+# list(REMOVE_ITEM c_src ${TcpClient_fi})
+list(REMOVE_ITEM c_src ${occi_fi})
+
+
 #==========构造服务器端
 
 file(GLOB s_src "*/src/*.c*")
@@ -58,7 +65,6 @@ file(GLOB s_rsa "/home/boyi/DataTrans/Server/rsa/*")
 file(GLOB_RECURSE Client_fi "Client/*")
 # list(REMOVE_ITEM c_src ${TcpClient_fi})
 list(REMOVE_ITEM s_src ${Client_fi})
-
 
 
 # 添加宏处理项
@@ -80,6 +86,9 @@ target_link_libraries(Client OpenSSL::Crypto)
 target_link_libraries(Client protobuf)
 
 
+
+# add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
+
 add_executable(Server ${s_src} ${s_include} ${s_json} ${s_rsa})
 
 target_link_libraries(Server json)
@@ -89,5 +98,10 @@ target_link_libraries(Server OpenSSL::Crypto)
 
 target_link_libraries(Server protobuf)
 
+# occi操作有关的动态库
+target_link_libraries(Server occi)
 
+target_link_libraries(Server clntsh)
+
+target_link_libraries(Server nnz11)
 

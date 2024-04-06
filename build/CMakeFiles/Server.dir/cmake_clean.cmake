@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Server.dir/EndDecCode/src/RespondFactory.o.d"
   "CMakeFiles/Server.dir/Hash/src/Hash.o"
   "CMakeFiles/Server.dir/Hash/src/Hash.o.d"
+  "CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o"
+  "CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o.d"
   "CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o"
   "CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o.d"
   "CMakeFiles/Server.dir/Server/src/ServerOP.o"

@@ -181,10 +181,24 @@ CMakeFiles/Server.dir/Hash/src/Hash.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Hash/src/Hash.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyi/DataTrans/Hash/src/Hash.cpp -o CMakeFiles/Server.dir/Hash/src/Hash.s
 
+CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o: ../OcciOp/src/OCCIOP.cpp
+CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o -MF CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o.d -o CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o -c /home/boyi/DataTrans/OcciOp/src/OCCIOP.cpp
+
+CMakeFiles/Server.dir/OcciOp/src/OCCIOP.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/OcciOp/src/OCCIOP.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boyi/DataTrans/OcciOp/src/OCCIOP.cpp > CMakeFiles/Server.dir/OcciOp/src/OCCIOP.i
+
+CMakeFiles/Server.dir/OcciOp/src/OCCIOP.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/OcciOp/src/OCCIOP.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyi/DataTrans/OcciOp/src/OCCIOP.cpp -o CMakeFiles/Server.dir/OcciOp/src/OCCIOP.s
+
 CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o: ../Openssl/src/RsaCrypto.cpp
 CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o -MF CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o.d -o CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o -c /home/boyi/DataTrans/Openssl/src/RsaCrypto.cpp
 
 CMakeFiles/Server.dir/Openssl/src/RsaCrypto.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/Server.dir/Openssl/src/RsaCrypto.s: cmake_force
 CMakeFiles/Server.dir/Server/src/ServerOP.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/src/ServerOP.o: ../Server/src/ServerOP.cpp
 CMakeFiles/Server.dir/Server/src/ServerOP.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Server.dir/Server/src/ServerOP.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Server.dir/Server/src/ServerOP.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/Server/src/ServerOP.o -MF CMakeFiles/Server.dir/Server/src/ServerOP.o.d -o CMakeFiles/Server.dir/Server/src/ServerOP.o -c /home/boyi/DataTrans/Server/src/ServerOP.cpp
 
 CMakeFiles/Server.dir/Server/src/ServerOP.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/Server.dir/Server/src/ServerOP.s: cmake_force
 CMakeFiles/Server.dir/Server/src/main.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/src/main.o: ../Server/src/main.cpp
 CMakeFiles/Server.dir/Server/src/main.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Server.dir/Server/src/main.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Server.dir/Server/src/main.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/Server/src/main.o -MF CMakeFiles/Server.dir/Server/src/main.o.d -o CMakeFiles/Server.dir/Server/src/main.o -c /home/boyi/DataTrans/Server/src/main.cpp
 
 CMakeFiles/Server.dir/Server/src/main.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/Server.dir/Server/src/main.s: cmake_force
 CMakeFiles/Server.dir/ShareMemary/src/BaseShm.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/ShareMemary/src/BaseShm.o: ../ShareMemary/src/BaseShm.cpp
 CMakeFiles/Server.dir/ShareMemary/src/BaseShm.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Server.dir/ShareMemary/src/BaseShm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Server.dir/ShareMemary/src/BaseShm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/ShareMemary/src/BaseShm.o -MF CMakeFiles/Server.dir/ShareMemary/src/BaseShm.o.d -o CMakeFiles/Server.dir/ShareMemary/src/BaseShm.o -c /home/boyi/DataTrans/ShareMemary/src/BaseShm.cpp
 
 CMakeFiles/Server.dir/ShareMemary/src/BaseShm.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/Server.dir/ShareMemary/src/BaseShm.s: cmake_force
 CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.o: ../ShareMemary/src/SecKeyShm.cpp
 CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.o -MF CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.o.d -o CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.o -c /home/boyi/DataTrans/ShareMemary/src/SecKeyShm.cpp
 
 CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/Server.dir/ShareMemary/src/SecKeyShm.s: cmake_force
 CMakeFiles/Server.dir/TcpClient/src/TcpSocket.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/TcpClient/src/TcpSocket.o: ../TcpClient/src/TcpSocket.cpp
 CMakeFiles/Server.dir/TcpClient/src/TcpSocket.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Server.dir/TcpClient/src/TcpSocket.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Server.dir/TcpClient/src/TcpSocket.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/TcpClient/src/TcpSocket.o -MF CMakeFiles/Server.dir/TcpClient/src/TcpSocket.o.d -o CMakeFiles/Server.dir/TcpClient/src/TcpSocket.o -c /home/boyi/DataTrans/TcpClient/src/TcpSocket.cpp
 
 CMakeFiles/Server.dir/TcpClient/src/TcpSocket.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/Server.dir/TcpClient/src/TcpSocket.s: cmake_force
 CMakeFiles/Server.dir/TcpServer/src/TcpServer.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/TcpServer/src/TcpServer.o: ../TcpServer/src/TcpServer.cpp
 CMakeFiles/Server.dir/TcpServer/src/TcpServer.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Server.dir/TcpServer/src/TcpServer.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Server.dir/TcpServer/src/TcpServer.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/TcpServer/src/TcpServer.o -MF CMakeFiles/Server.dir/TcpServer/src/TcpServer.o.d -o CMakeFiles/Server.dir/TcpServer/src/TcpServer.o -c /home/boyi/DataTrans/TcpServer/src/TcpServer.cpp
 
 CMakeFiles/Server.dir/TcpServer/src/TcpServer.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/Server.dir/TcpServer/src/TcpServer.s: cmake_force
 CMakeFiles/Server.dir/ThreadPoll/src/Logger.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/ThreadPoll/src/Logger.o: ../ThreadPoll/src/Logger.cpp
 CMakeFiles/Server.dir/ThreadPoll/src/Logger.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Server.dir/ThreadPoll/src/Logger.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Server.dir/ThreadPoll/src/Logger.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/ThreadPoll/src/Logger.o -MF CMakeFiles/Server.dir/ThreadPoll/src/Logger.o.d -o CMakeFiles/Server.dir/ThreadPoll/src/Logger.o -c /home/boyi/DataTrans/ThreadPoll/src/Logger.cpp
 
 CMakeFiles/Server.dir/ThreadPoll/src/Logger.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/Server.dir/ThreadPoll/src/Logger.s: cmake_force
 CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.o: ../ThreadPoll/src/TaskQueue.cpp
 CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.o -MF CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.o.d -o CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.o -c /home/boyi/DataTrans/ThreadPoll/src/TaskQueue.cpp
 
 CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/Server.dir/ThreadPoll/src/TaskQueue.s: cmake_force
 CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o: ../ThreadPoll/src/ThreadPool.cpp
 CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o -MF CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o.d -o CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o -c /home/boyi/DataTrans/ThreadPoll/src/ThreadPool.cpp
 
 CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.i: cmake_force
@@ -331,6 +345,7 @@ Server_OBJECTS = \
 "CMakeFiles/Server.dir/EndDecCode/src/RespondCodec.o" \
 "CMakeFiles/Server.dir/EndDecCode/src/RespondFactory.o" \
 "CMakeFiles/Server.dir/Hash/src/Hash.o" \
+"CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o" \
 "CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o" \
 "CMakeFiles/Server.dir/Server/src/ServerOP.o" \
 "CMakeFiles/Server.dir/Server/src/main.o" \
@@ -353,6 +368,7 @@ Server: CMakeFiles/Server.dir/EndDecCode/src/RequestFactory.o
 Server: CMakeFiles/Server.dir/EndDecCode/src/RespondCodec.o
 Server: CMakeFiles/Server.dir/EndDecCode/src/RespondFactory.o
 Server: CMakeFiles/Server.dir/Hash/src/Hash.o
+Server: CMakeFiles/Server.dir/OcciOp/src/OCCIOP.o
 Server: CMakeFiles/Server.dir/Openssl/src/RsaCrypto.o
 Server: CMakeFiles/Server.dir/Server/src/ServerOP.o
 Server: CMakeFiles/Server.dir/Server/src/main.o
@@ -366,7 +382,7 @@ Server: CMakeFiles/Server.dir/ThreadPoll/src/ThreadPool.o
 Server: CMakeFiles/Server.dir/build.make
 Server: /usr/local/lib/libcrypto.so
 Server: CMakeFiles/Server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable Server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boyi/DataTrans/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable Server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

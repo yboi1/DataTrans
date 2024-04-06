@@ -1,4 +1,5 @@
-﻿#pragma once
+﻿// # define _GLIBCXX_USE_CXX11_ABI 0
+#pragma once
 #include <string>
 #include <occi.h>
 #include "SeckKeyNodeInfo.h"

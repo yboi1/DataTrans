@@ -3,6 +3,8 @@
 #include "TcpServer.h"
 #include "TcpSocket.h"
 #include "Message.pb.h"
+#include "OCCIOP.h"
+// #include "SeckKeyNodeInfo.h"
 
 class ServerOP
 {
@@ -23,6 +25,12 @@ private:
     string m_serverID;
     map<unsigned int, TcpSocket*> m_map;
     TcpServer *m_server = NULL;
+
+    string m_usrdb;
+    string m_passdb;
+    string m_connstr;
+   
+    OCCIOP m_occi;
 };
 
 void* workHard(void* arg);

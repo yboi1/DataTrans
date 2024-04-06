@@ -4,7 +4,7 @@
 #include <time.h>
 using namespace std;
 using namespace oracle::occi;
-
+# define _GLIBCXX_USE_CXX11_ABI 0
 OCCIOP::OCCIOP()
 {
 }
@@ -17,7 +17,7 @@ OCCIOP::~OCCIOP()
 bool OCCIOP::connectDB(string user, string passwd, string connstr)
 {
 	// 1. 初始化环境
-	m_env = Environment::createEnvironment("utf8", "utf8");
+	m_env = Environment::createEnvironment();
 	// 2. 创建连接
 	m_conn = m_env->createConnection(user, passwd, connstr);
 	if (m_conn == NULL)

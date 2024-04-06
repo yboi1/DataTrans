@@ -3,5 +3,5 @@
     "ServerID":"boyi",
     "UserDb":"system",
     "PassDb":"oracle",
-    "ConnStr":""
+    "ConnStr":"172.17.0.2:1521/"
 }

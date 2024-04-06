@@ -287,4 +287,18 @@ CMakeFiles/Server.dir/Server/src/main.o: \
  /usr/local/include/google/protobuf/descriptor.h \
  /usr/local/include/google/protobuf/stubs/mutex.h \
  /usr/local/include/google/protobuf/extension_set.h \
- /usr/include/c++/11/cassert
+ /usr/include/c++/11/cassert /home/boyi/DataTrans/OcciOp/include/OCCIOP.h \
+ /usr/local/include/occi.h /usr/local/include/occiCommon.h \
+ /usr/local/include/oci.h /usr/local/include/oratypes.h \
+ /usr/local/include/ocidfn.h /usr/local/include/oci1.h \
+ /usr/local/include/oro.h /usr/local/include/ori.h \
+ /usr/local/include/ort.h /usr/local/include/orl.h \
+ /usr/local/include/ociextp.h /usr/local/include/ociapr.h \
+ /usr/local/include/ociap.h /usr/local/include/nzt.h \
+ /usr/local/include/nzerror.h /usr/local/include/ocixmldb.h \
+ /usr/local/include/oci8dp.h /usr/local/include/ocixstream.h \
+ /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
+ /usr/include/c++/11/bits/list.tcc /usr/local/include/occiData.h \
+ /usr/local/include/occiControl.h /usr/local/include/occiObjects.h \
+ /usr/local/include/occiAQ.h \
+ /home/boyi/DataTrans/ShareMemary/include/SeckKeyNodeInfo.h
